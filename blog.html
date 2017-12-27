@@ -1,0 +1,539 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Christmas Red - Blog Page</title>
+<meta name="keywords" content="Christmas Red, blog, css templates, CSS, HTML" />
+<meta name="description" content="Christmas Red | Blog Page - free CSS template provided by templatemo.com" />
+<link href="templatemo_style.css" rel="stylesheet" type="text/css" />
+
+
+
+<link rel="stylesheet" type="text/css" href="css/ddsmoothmenu.css" />
+<script type="text/javascript" src="scripts/jquery.min.js"></script>
+<script type="text/javascript" src="scripts/ddsmoothmenu.js">
+
+/***********************************************
+* Smooth Navigational Menu- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+</script>
+
+<script type="text/javascript">
+
+ddsmoothmenu.init({
+	mainmenuid: "templatemo_menu", //menu DIV id
+	orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+	classname: 'ddsmoothmenu', //class added to menu's outer DIV
+	//customtheme: ["#1c5a80", "#18374a"],
+	contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+
+</script>
+
+<link rel="stylesheet" type="text/css" href="stylesheet/styles.css" />
+<script language="javascript" type="text/javascript" src="scripts/mootools-1.2.1-core.js"></script>
+<script language="javascript" type="text/javascript" src="scripts/mootools-1.2-more.js"></script>
+<script language="javascript" type="text/javascript" src="scripts/slideitmoo-1.1.js"></script>
+<script language="javascript" type="text/javascript">
+	window.addEvents({
+		'domready': function(){
+			/* thumbnails example , div containers */
+			new SlideItMoo({
+						overallContainer: 'SlideItMoo_outer',
+						elementScrolled: 'SlideItMoo_inner',
+						thumbsContainer: 'SlideItMoo_items',		
+						itemsVisible: 3,
+						elemsSlide: 2,
+						duration: 200,
+						itemsSelector: '.SlideItMoo_element',
+						itemWidth: 280,
+						showControls:1});
+		},
+		
+	});
+</script>
+    
+<style type="text/css">
+<!--
+#Layer1 {	position:absolute;
+	width:67px;
+	height:65px;
+	z-index:1;
+	left: 86px;
+	top: 12px;
+}
+-->
+</style>
+</head>
+<body id="home">
+
+<div id="templatemo_outer_wrapper">
+	<div id="templatemo_wrapper">
+    
+    	<div id="templatemo_header">
+    	  <div id="templatemo_menu" class="ddsmoothmenu">
+                <ul>
+                    <li><a href="index.html"><span></span>Home</a></li>
+                    <li><a href="about.html"><span></span>About</a>
+                      	<ul>
+                        	<li><a href="subpage.html">Item One</a></li>
+                        	<li><a href="subpage.html">Item Two</a></li>
+                        	<li><a href="subpage.html">Item Three</a></li>
+                    	</ul>
+                    </li>
+                    
+                  	<li><a href="blog.html" class="selected"><span></span>game</a></li>
+                    <li><a href="contact.html"><span></span>Contact</a></li>
+                </ul>
+                <br style="clear: left" />
+          </div> <!-- end of templatemo_menu -->
+            <div class="cleaner">
+              <div id="Layer1"><a href="index.html"><img src="images/72A6KM361(RFSFM_[4AD$}Y.jpg" width="68" height="79" border="0" /></a></div>
+              <div id="layer"><a href="index.html"></a></div>
+            </div>
+            
+	  </div> <!-- end of templatemo header -->
+        
+        <div id="intro_text"><img src="images/templatemo_mc.png" alt="Merry Christmas" /></div>
+        
+        <div id="templatemo_main">
+          <div class="cleaner">
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp; </p>
+            <p>&nbsp; </p>
+            <style>
+    #panel{
+	height: 570px;
+	width: 922px;
+	background: url(images/game_background.jpg);
+	position: absolute;
+	left: 300px;
+	top: 400px;
+	overflow: hidden;
+}
+    #panel div{position:absolute;left:0;color:White;font-size:12px;}
+    #panel .time{top:0;}
+    #panel .canBigCount{top:12px;}
+    #panel .score{top:24px;}
+            </style>
+
+<div style="color:Red;">Game description: the direction key controls movement, the space controls to be bigger. Eating  golden apple plus 100 points while red bomb reduce 100 points.Eating white apple will be given chance to have tow baskets in 5 seconds. </div>
+<div><input type="button" value="Start" onClick="GameStart()" /></div>
+
+<div id="panel" tabindex="0">
+    <div class="time">Time：<span id="time">60</span></div>
+    <div class="canBigCount">The time to have tow baskets：<span id="canBigCount">1</span></div>
+    <div class="score">Score：<span id="score">0</span></div>
+    <script>
+    //根据ID获取对应的dom元素
+function $(obj){
+    return typeof obj == 'string'?document.getElementById(obj):obj;
+}
+//获取某dom元素name对应的css值
+function getCss(obj,name){
+    obj = $(obj);
+    if(obj.currentStyle) {
+        return obj.currentStyle[name];
+    }
+    else {
+        return document.defaultView.getComputedStyle(obj,null)[name];
+    }
+}
+
+var Fly = function(){
+    //飞机对应的dom元素
+    this.dom = null;
+    //飞机信息
+    this.left = 0;
+    this.top = 0;
+    this.width = 0;
+    this.height = 0;
+    //可变大次数
+    this.canBigCount = 1;
+    //目前变大状态
+    this.isBig = false;
+    //移动状态
+    this.isMove = false;
+    //移动ID
+    this.moveId = null;
+
+    this.create();
+}
+Fly.prototype = {
+    //移动位移
+    movepx : 10,
+    //移动速度
+    moveSpeed : 30,
+    //创建飞机dom
+    create : function(){
+
+        this.dom = document.createElement('div');
+        this.dom.style.cssText = 'position:absolute;width:60px;height:30px;background:url(images/blacket60.jpg);';
+        
+        this.width = parseInt(this.dom.style.width,10);
+        this.height = parseInt(this.dom.style.height,10);
+    },
+    //初始化飞机位置
+    initPosition : function(gameWidth,gameHeight){
+        
+        this.left = (gameWidth-this.width)/2;
+        this.top = gameHeight-this.height;
+        this.dom.style.left = this.left + 'px';
+        this.dom.style.top = this.top + 'px';
+    },
+    //更新位置
+    update : function(){
+        this.dom.style.left = this.left+'px';
+        this.dom.style.top = this.top +'px';
+    },
+    //变大
+    changeBig : function(){
+        this.dom.style.width = (this.width*2) + 'px';
+        this.width = this.width*2;
+        this.isBig = true;
+    },
+    //还原
+    changeNormal : function(){
+        this.dom.style.width = (this.width/2) + 'px';
+        this.width = this.width/2;
+        this.isBig = false;
+    },
+    //键盘按下事件,e为event,gameWidth为游戏背景宽度
+    keydown : function(e,gameWidth){
+        switch(e.keyCode){
+            //空格
+            case 32:{
+                //判断剩余变大次数与变大状态
+                if(this.canBigCount > 0 && !this.isBig){
+                    
+                    var _this = this;
+                    //变大
+                    this.changeBig();
+                    //设置还原事件
+                    setTimeout(function(){
+                        _this.changeNormal();
+                    },5000);
+                    
+                    this.canBigCount -= 1;
+                    //刷新变大次数显示
+                    this.flashBigCount();
+                }
+                break;
+            };
+            //方向左
+            case 37:{
+                if(!this.isMove){
+                    this.isMove = true;
+                    this.move('left');
+                }
+                break;
+            };
+            //方向右
+            case 39:{
+                if(!this.isMove){
+                    this.isMove = true;
+                    this.move('right',gameWidth);
+                }
+                break;
+            };
+        }
+    },
+    //键盘释放事件
+    keyup : function(e){
+        
+        if(e.keyCode == 37 || e.keyCode == 39){
+            this.isMove = false;
+            clearInterval(this.moveId);
+        }
+        
+    },
+    //飞机移动
+    move : function(dir,gameWidth){
+        
+        _this = this;
+        
+        if(dir == 'left'){
+            this.moveId = setInterval(function(){
+                
+                _this.left = _this.left-_this.movepx <=0?0:_this.left-_this.movepx;
+                _this.update();
+                
+            },this.moveSpeed);
+        }
+        else{
+            this.moveId = setInterval(function(){
+                
+                _this.left = _this.left+_this.movepx >=gameWidth-_this.width?gameWidth-_this.width:_this.left+_this.movepx;
+                _this.update();
+                
+            },this.moveSpeed);
+        }
+        
+    },
+    //刷新变大次数显示，外部调用接口
+    flashBigCount : function(){}
+}
+
+var Bullet = function(type){
+    //子弹dom元素
+    this.dom = null;
+    //子弹信息
+    this.left = 0;
+    this.top = 0;
+    this.width = 0;
+    this.height = 0;
+    this.type = type;
+    
+    this.create();
+}
+Bullet.prototype = {
+    //子弹类型与颜色映射表
+    bullettype:{
+        "good":"url(images/goldapple20.jpg)",
+        "bad":"url(images/boom20.jpg)",
+        "big":"url(images/goldapple20_white.jpg)"
+    },
+    //每次移动位移
+    movepx : 10,
+    //子弹速度
+    movespeed : 50,
+    //创建子弹dom
+    create : function(){
+
+        this.dom = document.createElement('div');
+        this.dom.style.cssText = 'position:absolute;width:20px;height:20px;overflow:hidden;background:' + this.bullettype[this.type]+';';
+        
+        this.width = parseInt(this.dom.style.width,10);
+        this.height = parseInt(this.dom.style.height,10);
+    },
+    //初始化子弹位置
+    initPosition : function(gameWidth){
+        
+        this.left = parseInt(Math.random()*gameWidth+1,10);
+        this.dom.style.left = this.left + 'px';
+    },
+    //子弹动画,height为游戏背景高度
+    animation : function(height){
+        
+        var _this = this;
+        //向下移动函数
+        var downmove = function(){
+            //更新位置
+            _this.top = _this.top +  _this.movepx;
+            _this.update();
+            //判断子弹位置以及是否击中飞机
+            if(_this.top < height && !_this.isBeatFly()){
+                
+                setTimeout(downmove,_this.movespeed);
+            }
+            else {
+                //动画结束触发事件
+                _this.onEnd();
+            }
+        }
+        downmove();
+    },
+    //更新位置
+    update : function(){
+        this.dom.style.left = this.left+'px';
+        this.dom.style.top = this.top +'px';
+    },
+    //判断子弹击中飞机否
+    checkBeatFly :function(fly){
+        if (this.left >= fly.left && this.left + this.width <= fly.left + fly.width) {
+            if (this.top + this.height >= fly.top && this.top + this.height <= fly.top + fly.height) {
+                return true;
+            }
+        }
+        return false;
+    },
+    //动画结束触发事件，外部覆盖
+    onEnd : function(){},
+    //子弹是否击中飞机以及击中后处理事件，外部覆盖
+    isBeatFly : function(){}
+}
+
+var Game = {
+    //游戏背景dom元素
+    gamePanel:null,
+    //游戏背景宽度
+    gameWidth : 0,
+    //游戏背景高度
+    gameHeight : 0,
+    //子弹生成频率
+    bulletHz : 200,
+    //飞机
+    fly : null,
+    //分数
+    score:0,
+    //时间
+    time : 61,
+    //是否开始
+    start : false,
+    //初始化
+    init : function(){
+        
+        this.initGamePanel();
+        
+        this.initFly();
+        
+        this.initBullet();
+        
+        this.startTime();
+        
+        this.start = true;
+    },
+    //初始化游戏背景数据
+    initGamePanel : function(){
+        this.gamePanel = $('panel');
+        this.gameWidth = parseInt(getCss(this.gamePanel,'width'),10);
+        this.gameHeight = parseInt(getCss(this.gamePanel,'height'),10);
+        
+        this.gamePanel.focus();
+    },
+    //初始化飞机
+    initFly : function(){
+        this.fly = new Fly();
+        
+        this.fly.initPosition(this.gameWidth,this.gameHeight);
+        this.fly.flashBigCount = function(){
+            $('canBigCount').innerHTML = this.canBigCount;
+        }
+        
+        this.gamePanel.appendChild(this.fly.dom);
+        //为body绑定键盘按下事件
+        document.body.onkeydown = function(e){Game.flymove(e);};
+        //为body绑定键盘释放事件
+        document.body.onkeyup = function(e){Game.stopmove(e);};
+    },
+    //初始化子弹
+    initBullet : function(){
+        
+        var _this = this;
+        //生成子弹函数
+        var process = function(){
+            //随机数，决定生成加分或扣分子弹
+            var random = parseInt(Math.random()*10+1,10);
+            //随机数，决定生成增加变大子弹
+            var addbig = parseInt(Math.random()*50+1,10);
+            //新建一个子弹对象
+            var bullet = new Bullet(random%3==0?'bad':addbig==28?'big':'good');
+            
+            bullet.initPosition(_this.gameWidth);
+            //覆盖子弹动画结束事件
+            bullet.onEnd = function(){
+                _this.gamePanel.removeChild(this.dom);
+                this.dom = null;
+            }
+            //覆盖子弹是否击中飞机以及击中后处理事件
+            bullet.isBeatFly = function(){
+            
+                if (this.checkBeatFly(_this.fly)){
+                    _this.changeScore(this.type);
+                    return true;
+                }
+                return false;
+            }
+            
+            _this.gamePanel.appendChild(bullet.dom);
+            
+            bullet.animation(_this.gameHeight);
+
+            if(_this.time > 0)setTimeout(process,_this.bulletHz);
+        }
+        process();
+    },
+    //飞机移动
+    flymove : function(e){
+        e = e || window.event;
+
+        this.fly.keydown(e,this.gameWidth);
+    },
+    //飞机停止
+    stopmove : function(e){
+        e = e || window.event;
+        
+        this.fly.keyup(e);
+    },
+    //改变分数
+    changeScore : function(type){
+        if (type == 'big') {
+            this.fly.canBigCount += 1;
+            this.fly.flashBigCount();
+        }
+        else {
+            this.score += type == "bad" ? -100 : 100;
+            $('score').innerHTML = this.score;
+        }
+    },
+    //计时
+    startTime : function(){
+        if(this.time >0){
+            var _this = this;
+            this.time -= 1;
+            $('time').innerHTML = this.time;
+            setTimeout(function(){_this.startTime();},1000);
+        }
+        else {
+            this.start = false;
+        }
+    },
+    //重置
+    reset : function(){
+        this.gameWidth = 0;
+        this.gameHeight = 0;
+        this.fly && $('panel').removeChild(this.fly.dom);
+        this.fly = null;
+        this.movepx = 30;
+        this.score = 0;
+        $('score').innerHTML = this.score;
+        this.time = 61;
+        $('time').innerHTML = this.time-1;
+        $('canBigCount').innerHTML = 1;
+    }
+}
+
+function GameStart(){
+    
+    if (Game.start == false) {
+        
+        Game.reset();
+        Game.init();
+    }
+}
+    
+    </script>
+</div>
+
+          </div>
+            
+      </div>
+    
+    </div> <!-- end of templatemo_wrapper -->
+</div> <!-- end of templatemo_outer_wrapper -->
+
+<div id="templatemo_footer_wrapper">
+	<div id="templatemo_footer">
+    Copyright © 2048 <a href="#">Your Company Name</a> |</div>
+</div>
+
+</body>
+</html>
